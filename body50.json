@@ -1,0 +1,1 @@
+{"model":"qwen/qwen3.8-27b","max_tokens":300,"messages":[{"role":"user","content":"Write a long story"}]}
