@@ -140,7 +140,7 @@ Execute this in your terminal to see real-time token streaming:
 curl -N -X POST http://localhost:3000/v1/chat/completions \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "llama-3.3-70b-versatile",
+    "model": "qwen/qwen3.8-27b",
     "messages": [
       {"role": "user", "content": "Explain quantum computing in 3 short bullet points."}
     ],

@@ -7,7 +7,10 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "build": "tsc",
-    "start": "node dist/server.js"
+    "start": "node dist/server.js",
+    "test": "tsx test-client.ts",
+    "test:load": "tsx load-test.ts",
+    "test:k6": ".\\k6.exe run k6-load-test.js"
   },
   "dependencies": {
     "dotenv": "^16.4.7",

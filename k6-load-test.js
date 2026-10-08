@@ -10,10 +10,11 @@ const errorStreams = new Counter('error_streams');
 
 export const options = {
   scenarios: {
-    concurrent_streaming_load: {
-      executor: 'constant-vus',
-      vus: 500,               // 500 Concurrent Active Streams
-      duration: '1m',         // Run load test for 1 minute
+    safe_streaming_load: {
+      executor: 'shared-iterations',
+      vus: 2,
+      iterations: 10,         // Stays safely within Groq Free-Tier 30 RPM limit
+      maxDuration: '30s',
     },
   },
   thresholds: {
@@ -27,7 +28,7 @@ export default function () {
   const url = 'http://localhost:3000/v1/chat/completions';
   
   const payload = JSON.stringify({
-    model: 'llama-3.3-70b-versatile',
+    model: 'qwen/qwen3.8-27b',
     messages: [
       {
         role: 'user',
