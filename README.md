@@ -12,7 +12,7 @@ This gateway is engineered specifically to master and showcase the core primitiv
 - **Real-time telemetry tracking TTFT (Time to First Token), TPOT, and End-to-End latency percentiles (p50, p95, p99)**
 
 ---
-
+  
 ## 🌟 Why Do We Need an LLM Gateway?
 
 When building modern AI-powered applications, connecting your client frontend directly to upstream providers (like OpenAI or Groq) creates severe architectural, security, and scalability bottlenecks:
